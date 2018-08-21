@@ -12,12 +12,12 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class BeanConfiguration {
 
-    @LoadBalanced
-    @Bean
-    public RestTemplate restTemplate() {
-        final RestTemplate template = new RestTemplate();
-        template.setErrorHandler(new TccResponseErrorHandler());
-        return template;
-    }
+	@LoadBalanced
+	@Bean
+	public RestTemplate restTemplate() {
+		final RestTemplate template = new RestTemplate();
+		template.setErrorHandler(new TccResponseErrorHandler());
+		return template;
+	}
 
 }

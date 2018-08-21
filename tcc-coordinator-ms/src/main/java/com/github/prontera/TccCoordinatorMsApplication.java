@@ -6,7 +6,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
 @SpringCloudApplication
 public class TccCoordinatorMsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(TccCoordinatorMsApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(TccCoordinatorMsApplication.class, args);
+	}
 }

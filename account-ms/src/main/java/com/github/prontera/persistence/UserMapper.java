@@ -6,16 +6,15 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@SuppressWarnings("InterfaceNeverImplemented")
 @MyBatisRepository
 public interface UserMapper extends CrudMapper<User> {
 
-    User selectByMobile(@Param("mobile") String mobile);
+	User selectByMobile(@Param("mobile") String mobile);
 
-    List<User> selectAll(@Param("offset") int offset, @Param("limited") int limited);
+	List<User> selectAll(@Param("offset") int offset, @Param("limited") int limited);
 
-    int consumeBalance(@Param("userId") Long userId, @Param("amount") Long amount);
+	int consumeBalance(@Param("userId") Long userId, @Param("amount") Long amount);
 
-    int returnReservedBalance(@Param("userId") Long userId, @Param("amount") Long amount);
+	int returnReservedBalance(@Param("userId") Long userId, @Param("amount") Long amount);
 
 }

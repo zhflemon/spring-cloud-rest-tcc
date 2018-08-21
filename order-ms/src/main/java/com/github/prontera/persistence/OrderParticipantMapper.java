@@ -6,9 +6,8 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@SuppressWarnings("InterfaceNeverImplemented")
 @MyBatisRepository
 public interface OrderParticipantMapper extends CrudMapper<OrderParticipant> {
 
-    List<OrderParticipant> selectByOrderId(@Param("orderId") Long orderId);
+	List<OrderParticipant> selectByOrderId(@Param("orderId") Long orderId);
 }

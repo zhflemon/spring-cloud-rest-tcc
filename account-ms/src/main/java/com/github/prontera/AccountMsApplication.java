@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringCloudApplication
 public class AccountMsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AccountMsApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(AccountMsApplication.class, args);
+	}
 }

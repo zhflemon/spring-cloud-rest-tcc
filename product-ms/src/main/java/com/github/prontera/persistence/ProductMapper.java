@@ -6,12 +6,11 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@SuppressWarnings("InterfaceNeverImplemented")
 @MyBatisRepository
 public interface ProductMapper extends CrudMapper<Product> {
-    List<Product> selectAll(@Param("offset") int offset, @Param("limited") int limited);
+	List<Product> selectAll(@Param("offset") int offset, @Param("limited") int limited);
 
-    int consumeStock(@Param("productId") Long productId);
+	int consumeStock(@Param("productId") Long productId);
 
-    int returnReservedStock(@Param("productId") Long productId);
+	int returnReservedStock(@Param("productId") Long productId);
 }

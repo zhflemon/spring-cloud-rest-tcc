@@ -6,13 +6,12 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.Set;
 
-@SuppressWarnings("InterfaceNeverImplemented")
 @MyBatisRepository
 public interface ProductStockTccMapper extends CrudMapper<ProductStockTcc> {
 
-    Set<ProductStockTcc> selectExpireReservation(@Param("limitation") int limitation);
+	Set<ProductStockTcc> selectExpireReservation(@Param("limitation") int limitation);
 
-    int deleteTryingById(@Param("id") Long id);
+	int deleteTryingById(@Param("id") Long id);
 
-    int updateToConfirmationById(@Param("id") Long id);
+	int updateToConfirmationById(@Param("id") Long id);
 }

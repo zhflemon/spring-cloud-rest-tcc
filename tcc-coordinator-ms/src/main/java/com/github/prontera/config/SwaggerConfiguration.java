@@ -18,22 +18,20 @@ import java.util.List;
 @Configuration
 public class SwaggerConfiguration extends SwaggerTemplate {
 
-    @Bean
-    public SwaggerApiInfo info() {
-        return SwaggerApiInfo.builder().title("Coordinator MicroService").version("v1").serviceUrl(null).statusList(extractStatusCodes()).build();
-    }
+	@Bean
+	public SwaggerApiInfo info() {
+		return SwaggerApiInfo.builder().title("Coordinator MicroService").version("v1").serviceUrl(null)
+				.statusList(extractStatusCodes()).build();
+	}
 
-    private List<ResponseMessage> extractStatusCodes() {
-        final LinkedList<ResponseMessage> list = new LinkedList<>();
-        for (StatusCode statusCodes : StatusCode.values()) {
-            final ResponseMessageBuilder builder = new ResponseMessageBuilder();
-            final ResponseMessage message = builder
-                    .code(statusCodes.code())
-                    .message(statusCodes.message())
-                    .build();
-            list.add(message);
-        }
-        return list;
-    }
+	private List<ResponseMessage> extractStatusCodes() {
+		final LinkedList<ResponseMessage> list = new LinkedList<>();
+		for (StatusCode statusCodes : StatusCode.values()) {
+			final ResponseMessageBuilder builder = new ResponseMessageBuilder();
+			final ResponseMessage message = builder.code(statusCodes.code()).message(statusCodes.message()).build();
+			list.add(message);
+		}
+		return list;
+	}
 
 }

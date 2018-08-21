@@ -8,7 +8,7 @@ import zipkin.server.EnableZipkinServer;
 @SpringBootApplication
 public class ZipkinMsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ZipkinMsApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ZipkinMsApplication.class, args);
+	}
 }

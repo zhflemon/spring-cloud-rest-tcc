@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AopConfiguration {
 
-    @Bean
-    public HibernateValidatorAspect hibernateValidatorAspect() {
-        final int order = Byte.MAX_VALUE + 2;
-        return new HibernateValidatorAspect(order, StatusCode.INVALID_MODEL_FIELDS);
-    }
+	@Bean
+	public HibernateValidatorAspect hibernateValidatorAspect() {
+		final int order = Byte.MAX_VALUE + 2;
+		return new HibernateValidatorAspect(order, StatusCode.INVALID_MODEL_FIELDS);
+	}
 
 }

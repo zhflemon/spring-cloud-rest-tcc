@@ -6,12 +6,11 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-@SuppressWarnings("InterfaceNeverImplemented")
 @MyBatisRepository
 public interface PointFlowMapper extends CrudMapper<PointFlow> {
 
-    List<PointFlow> selectAllByUserId(@Param("userId") Long userId);
+	List<PointFlow> selectAllByUserId(@Param("userId") Long userId);
 
-    PointFlow selectByOrderId(@Param("orderId") Long orderId);
+	PointFlow selectByOrderId(@Param("orderId") Long orderId);
 
 }

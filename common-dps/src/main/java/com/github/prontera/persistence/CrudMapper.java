@@ -5,18 +5,17 @@ package com.github.prontera.persistence;
  *
  * @author Zhao Junjian
  */
-@SuppressWarnings({"InterfaceNeverImplemented", "MybatisMapperMethodInspection"})
 public interface CrudMapper<T> {
 
-    int deleteByPrimaryKey(Long id);
+	int deleteByPrimaryKey(Long id);
 
-    int insert(T record);
+	int insert(T record);
 
-    int insertSelective(T record);
+	int insertSelective(T record);
 
-    T selectByPrimaryKey(Long id);
+	T selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(T record);
+	int updateByPrimaryKeySelective(T record);
 
-    int updateByPrimaryKey(T record);
+	int updateByPrimaryKey(T record);
 }
